@@ -1,0 +1,37 @@
+{
+  "name": "packemon-input-main-issue",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./cjs/index.cjs",
+  "scripts": {
+    "build": "packemon build"
+  },
+  "author": "azu",
+  "license": "MIT",
+  "devDependencies": {
+    "packemon": "^2.4.0"
+  },
+  "packemon": [
+    {
+      "inputs": {
+        "index": "src/some.ts"
+      },
+      "format": "esm",
+      "platform": "browser"
+    },
+    {
+      "inputs": {
+        "index": "src/some.ts"
+      },
+      "format": "cjs",
+      "platform": "node"
+    }
+  ],
+  "module": "./esm/index.js",
+  "files": [
+    "cjs/**/*.{cjs,mjs,map}",
+    "esm/**/*.{js,map}",
+    "lib/**/*.{js,map}",
+    "src/**/*.{ts,tsx,json}"
+  ]
+}
